@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GMI Kalkulagailua</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gorputz-Masaren Indizea (GMI) Kalkulagailua</h1>
+    <form id="gmi-form">
+      <div class="input-group">
+        <label for="pisua">Pisua (kilogramotan):</label>
+        <input type="number" id="pisua" placeholder="Pisua (adibidez: 70)" required>
+      </div>
+      <div class="input-group">
+        <label for="altuera">Altuera (metroetan):</label>
+        <input type="number" id="altuera" step="0.01" placeholder="Altuera (adibidez: 1.75)" required>
+      </div>
+      <button type="submit">Kalkulatu GMIa</button>
+    </form>
+    
+    <div id="gmi-result" class="result">
+      <p id="gmi-text"></p>
+      <p id="classification"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

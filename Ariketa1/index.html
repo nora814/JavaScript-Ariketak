@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bidaiaren Kostua Kalkulatu</title>
+  <!-- Enlazar el archivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bidaiaren Kostua Kalkulatu</h1>
+    <p>Idatzi zure bidaiaren gastuak kategoria bakoitzean:</p>
+    
+    <!-- Campo de entrada para cada gasto -->
+    <div class="input-group">
+      <label for="ostatuGastua">Ostatu-gastuak (€):</label>
+      <input type="number" id="ostatuGastua" placeholder="Adibidez: 200" min="0">
+    </div>
+    <div class="input-group">
+      <label for="elikaduraGastua">Elikadura-gastuak (€):</label>
+      <input type="number" id="elikaduraGastua" placeholder="Adibidez: 150" min="0">
+    </div>
+    <div class="input-group">
+      <label for="entretenimenduGastua">Entretenimendu-gastuak (€):</label>
+      <input type="number" id="entretenimenduGastua" placeholder="Adibidez: 100" min="0">
+    </div>
+
+    <!-- Botón para calcular -->
+    <button id="calculateButton">Kalkulatu</button>
+    
+    <!-- Resultado -->
+    <p id="erantzuna"></p>
+  </div>
+
+  <!-- Enlazar el archivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

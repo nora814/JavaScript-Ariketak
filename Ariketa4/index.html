@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deskontu Kalkulagailua</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Deskontuaren bidez azken prezioa kalkulatu</h1>
+    <form id="deskontu-form">
+      <div class="input-group">
+        <label for="prezioa">Jatorrizko prezioa (eurotan):</label>
+        <input type="number" id="prezioa" placeholder="Prezioa (adibidez: 50)" required>
+      </div>
+      <div class="input-group">
+        <label for="deskontua">Aplikatu beharreko deskontuaren ehunekoa (%):</label>
+        <input type="number" id="deskontua" placeholder="Deskontoa (adibidez: 20)" required>
+      </div>
+      <button type="submit">Kalkulatu azken prezioa</button>
+    </form>
+    
+    <div id="result" class="result">
+      <p id="final-price"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
