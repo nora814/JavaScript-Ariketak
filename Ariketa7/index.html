@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenperatura Bihurgailua</title>
+</head>
+<body>
+  <h1>Tenperatura Bihurgailua</h1>
+
+  <form id="bihurketa-forma">
+    <label for="mota">Zer bihurketa-mota egin nahi duzu?</label><br>
+    <input type="radio" id="celsius-fahrenheit" name="mota" value="1" checked>
+    <label for="celsius-fahrenheit">1. Celsiusetik Fahrenheitera</label><br>
+    <input type="radio" id="fahrenheit-celsius" name="mota" value="2">
+    <label for="fahrenheit-celsius">2. Fahrenheitetik Celsiusera</label><br><br>
+
+    <label for="tenperatura">Sartu tenperatura: </label>
+    <input type="number" id="tenperatura" required><br><br>
+
+    <button type="button" onclick="bihurtuTenperatura()">Bihurtu</button>
+  </form>
+
+  <p id="emaitza"></p>
+
+  <script src="tenperaturaBihurgailua.js"></script>
+</body>
+</html>

@@ -1,22 +1,25 @@
-// Obtener los elementos del DOM
-const calculateButton = document.getElementById("calculateButton");
-const txakurAdinaInput = document.getElementById("txakurAdina");
-const erantzuna = document.getElementById("erantzuna");
+// DOM-eko elementuak lortu
+const calculateButton = document.getElementById("calculateButton"); // Kalkulatzeko botoia
+const txakurAdinaInput = document.getElementById("txakurAdina"); // Txakurraren adina sartzeko laukia
+const erantzuna = document.getElementById("erantzuna"); // Emaitza bistaratuko den elementua
 
-// Función para calcular la edad del perro en años humanos
+// Txakurraren adina giza urteetan kalkulatzeko funtzioa
 function kalkulatuAdina() {
-  const txakurAdina = parseInt(txakurAdinaInput.value); // Convertir la entrada a número
+  const txakurAdina = parseInt(txakurAdinaInput.value); // Erabiltzailearen balioa zenbaki oso bihurtu
 
-  // Validar que el usuario haya ingresado un valor válido
-  if (isNaN(txakurAdina) || txakurAdina < 0) {
-    erantzuna.innerText = "Mesedez, zenbaki baliodun eta positiboa sartu.";
-    erantzuna.style.color = "red"; // Mostrar mensaje de error en rojo
+  // Erabiltzaileak sartutako balioa baliozkoa dela egiaztatu
+  if (isNaN(txakurAdina) || txakurAdina < 0) { 
+    // Balioa ez bada zenbaki baliodun bat edo negatiboa bada:
+    erantzuna.innerText = "Mesedez, zenbaki baliodun eta positiboa sartu."; // Errore-mezua erakutsi
+    erantzuna.style.color = "red"; // Errore-mezua gorriz erakutsi
   } else {
-    const gizaAdina = txakurAdina * 7; // Calcular edad en años humanos
-    erantzuna.innerText = `Txakurrak ${gizaAdina} urte ditu giza urteetan.`; // Mostrar resultado
-    erantzuna.style.color = "green"; // Cambiar el color del resultado
+    // Balioa zuzena bada, giza urteetan adina kalkulatu
+    const gizaAdina = txakurAdina * 7; // Txakurraren adina 7z biderkatu
+    erantzuna.innerText = `Txakurrak ${gizaAdina} urte ditu giza urteetan.`; // Emaitza erakutsi
+    erantzuna.style.color = "green"; // Emaitzaren testua berdez erakutsi
   }
 }
 
-// Asociar la función al botón
-calculateButton.addEventListener("click", kalkulatuAdina);
+// Funtzioa botoiari lotu
+calculateButton.addEventListener("click", kalkulatuAdina); // Botoia klik egitean kalkulatuAdina funtzioa exekutatu
+

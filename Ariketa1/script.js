@@ -1,31 +1,32 @@
-// Obtener los elementos del DOM
-const calculateButton = document.getElementById("calculateButton");
-const ostatuGastuaInput = document.getElementById("ostatuGastua");
-const elikaduraGastuaInput = document.getElementById("elikaduraGastua");
-const entretenimenduGastuaInput = document.getElementById("entretenimenduGastua");
-const erantzuna = document.getElementById("erantzuna");
+// DOM-eko elementuak lortu
+const calculateButton = document.getElementById("calculateButton"); // Kalkulatzeko botoia
+const ostatuGastuaInput = document.getElementById("ostatuGastua"); // Ostatu-gastua sartzeko laukia
+const elikaduraGastuaInput = document.getElementById("elikaduraGastua"); // Elikadura-gastua sartzeko laukia
+const entretenimenduGastuaInput = document.getElementById("entretenimenduGastua"); // Entretenimendu-gastua sartzeko laukia
+const erantzuna = document.getElementById("erantzuna"); // Emaitza erakusteko elementua
 
-// Función para calcular el costo total del viaje
+// Bidaiaren guztizko kostua kalkulatzeko funtzioa
 function kalkulatuKostua() {
-  // Obtener los valores ingresados por el usuario
-  const ostatuGastua = parseFloat(ostatuGastuaInput.value);
-  const elikaduraGastua = parseFloat(elikaduraGastuaInput.value);
-  const entretenimenduGastua = parseFloat(entretenimenduGastuaInput.value);
+  // Erabiltzaileak sartutako balioak lortu
+  const ostatuGastua = parseFloat(ostatuGastuaInput.value); // Ostatu-gastuaren balioa
+  const elikaduraGastua = parseFloat(elikaduraGastuaInput.value); // Elikadura-gastuaren balioa
+  const entretenimenduGastua = parseFloat(entretenimenduGastuaInput.value); // Entretenimendu-gastuaren balioa
 
-  // Validar que todos los valores sean números válidos
+  // Balio guztiak zenbaki baliodunak direla egiaztatu
   if (isNaN(ostatuGastua) || isNaN(elikaduraGastua) || isNaN(entretenimenduGastua)) {
-    erantzuna.innerText = "Mesedez, zenbaki baliodunak sartu.";
-    erantzuna.style.color = "red"; // Mostrar mensaje de error en rojo
-    return;
+    erantzuna.innerText = "Mesedez, zenbaki baliodunak sartu."; // Errore-mezua bistaratzen du
+    erantzuna.style.color = "red"; // Errore-mezua gorriz erakutsi
+    return; // Funtzioa eten
   }
 
-  // Calcular el costo total
+  // Guztizko kostua kalkulatu
   const guztizkoKostua = ostatuGastua + elikaduraGastua + entretenimenduGastua;
 
-  // Mostrar el resultado
-  erantzuna.innerText = `Bidaiaren guztizko kostua ${guztizkoKostua} €da.`;
-  erantzuna.style.color = "green"; // Cambiar el color del resultado
+  // Emaitza erakutsi erabiltzaileari
+  erantzuna.innerText = `Bidaiaren guztizko kostua ${guztizkoKostua} €da.`; // Emaitza erakutsi testu gisa
+  erantzuna.style.color = "green"; // Emaitzaren testua berdez erakutsi
 }
 
-// Asociar la función al botón
-calculateButton.addEventListener("click", kalkulatuKostua);
+// Funtzioa botoiari lotu
+calculateButton.addEventListener("click", kalkulatuKostua); // Botoia klik egitean kalkulatuKostua funtzioa exekutatu
+
